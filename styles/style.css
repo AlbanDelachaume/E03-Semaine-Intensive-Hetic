@@ -4,12 +4,7 @@ body, html
     height: 100%;
     width: 100%;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-
 }
-
-
-
 
 /** 
 * ITEM SCROLL
@@ -85,7 +80,7 @@ body, html
 /**
  * 
  * 
- *  PARALLAX SECTION
+ *  PARALLAX - SECTION 0
  * 
  *
 **/
@@ -282,12 +277,9 @@ body, html
     height: 25px;
     top: 2%;
     left: 12%;
-    /* border: white 1px solid; */
-}
-
-#section1 .time 
-{
     color: white;
+    font-family: 'Quicksand', sans-serif;
+    /* border: white 1px solid; */
 }
 
 #section1 .date
@@ -297,6 +289,8 @@ body, html
     height: 28px;
     top: 7%;
     left: 12%;
+    font-family: 'Quicksand', sans-serif;
+
     /* border: white 1px solid; */
 }
 
@@ -351,6 +345,7 @@ body, html
 .big-circle-left .dot-info-left:hover .info-left-text
 {
     visibility: visible;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .dot-info-left:hover .info-left-line
@@ -480,6 +475,7 @@ body, html
 .big-circle-right .dot-info-right:hover .info-right-text
 {
     visibility: visible;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .dot-info-right:hover .info-right-line
@@ -597,6 +593,7 @@ body, html
     border-bottom: 3px solid white;
     background: black;
     line-height: 2.5em;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #section1 .title
@@ -615,6 +612,8 @@ body, html
     position: absolute;
     top: -30%;
     left: 2%;
+    font-family: 'Futura', sans-serif;
+    font-weight: medium;
 }
 
 #section1 .title hr
@@ -643,5 +642,71 @@ body, html
     font-size: 1.0em;
 }
 
+/**
+ * 
+ * 
+ *  RESPONSIVE
+ * 
+ *
+**/
 
-  
+/**
+ *  SECTION 1
+**/
+
+@media (min-width: 768px) and (max-width: 1024px) 
+{
+    
+    #section1 .time
+    {
+        left: 20%;
+    }
+
+    #section1 .date
+    {
+        top: 6%;
+        left: 20%;
+    }    
+    
+    .big-circle-left
+    {
+        left: 5%;
+        top: 28%;
+    }
+
+    .big-circle-right
+    {
+        left: 62%;
+        top: 28%;
+    }
+    
+    #section1 .title
+    {
+        left: 20%;
+        top: 30%;
+    }
+    
+    #section1 .presentation
+    {
+        position: absolute;
+        width: 600px;
+        height: 450px;
+        top: 34%;
+        left: 20%;
+        border-top: 3px solid white;
+        border-bottom: 3px solid white;
+        background: black;
+        line-height: 2.5em;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .dot-info-left,
+    .dot-info-right,
+    .item-scroll
+    {
+        visibility: hidden;
+    }
+}
+
+
+
