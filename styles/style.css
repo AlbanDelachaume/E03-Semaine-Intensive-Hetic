@@ -6,7 +6,106 @@ body, html
     margin: 0;
 }
 
-section
+.section
 {
-    background: pink;
+    background: #183252;
+}
+
+/**
+ * 
+ * 
+ *  PARALLAX SECTION
+ * 
+ *
+**/
+
+.lazy
+{
+    opacity: 0;
+    transition: opacity 1s;
+    will-change: opacity;
+}
+
+.lazy.loaded
+{
+    opacity: 1;
+}
+
+.parallax-scroll
+{
+    will-change: transform;
+}
+
+.container-parallax
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #183252;
+    overflow: hidden;
+}
+
+.container-parallax .image 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+.container-parallax .image .inner
+{
+    position: absolute;
+    top: -12%;
+    left: -12%;
+    bottom: -12%;
+    right: -12%;
+    background-position: center center;
+    background-size: cover;
+    transition: transform 1s cubic-bezier(0.13, 0.34, 0.16, 0.93);
+}
+
+.content
+{
+    height: 200vh;
+    background: #183252;
+}
+
+/*
+* Button Start Experience
+*/
+
+.start 
+{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    top: 45%;
+    left: 43%;
+    color: white;
+    background: none;
+    border: 2px solid white;
+    cursor: pointer;
+    transition-duration: 0.7s;
+}
+  
+.start:hover 
+{
+  background-color: white ;
+  color:#000000;
+}
+
+/*
+* Logo
+*/
+
+.logo
+{
+    position: absolute;
+    width: 150px;
+    height: 90px;
+    top: 30%;
+    left: 44.5%;
 }
