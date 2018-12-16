@@ -1,0 +1,539 @@
+/** 
+*
+*
+* SECTION 1
+*
+*
+*/
+
+.bg-section1
+{
+    width: 100%;
+    height: 100%;
+}
+
+/** 
+* logo
+*/
+
+#section1 .logo
+{
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    top: 2%;
+    left: 1%;
+    border-right: solid #ffffff 3px;
+}
+
+#section1 .logo .logo-HW
+{
+    max-width: 90%;
+    height: auto;
+    
+}
+
+/** 
+* Time / Date
+*/
+
+#section1 .time
+{
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    top: 2%;
+    left: 12%;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    /* border: white 1px solid; */
+}
+
+#section1 .date
+{
+    position: absolute;
+    width: 250px;
+    height: 28px;
+    top: 7%;
+    left: 12%;
+    font-family: 'Quicksand', sans-serif;
+
+    /* border: white 1px solid; */
+}
+
+#section1 .date
+{
+    color: white;
+
+}
+
+/** 
+* Circles left
+*/
+
+
+.big-circle-left
+{
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    left: 15%;
+    top: 20%;
+    border-radius: 50%;
+    border-left: white 2px solid;
+    border-top:  1px solid transparent;
+    border-bottom:  1px solid transparent;
+    border-right:  1px solid transparent;
+}
+
+.big-circle-left .dot-info-left
+{
+    position: absolute;
+    top: 80%;
+    left: 7.5%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    animation: flashes 1s infinite;
+}
+
+
+.big-circle-left .dot-info-left:hover
+{
+    animation: stop 1s infinite;
+}
+
+.big-circle-left .dot-info-left:hover .info-left
+{
+    visibility: visible;
+}
+
+.big-circle-left .dot-info-left:hover .info-left-text
+{
+    visibility: visible;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.dot-info-left:hover .info-left-line
+{
+    visibility: visible;
+}
+
+.big-circle-left .dot-info-left .info-left
+{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background: white;
+    top: 188%;
+    left: -625%;
+    visibility: hidden;
+}
+
+.big-circle-left .info-left .info-left-text
+{
+    position: absolute;
+    left: 10%;
+    top: -28%;
+    visibility: hidden;
+}
+
+.big-circle-left .info-left-line
+{
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: white;
+    top: 125%;
+    left: -250%;
+    transform: rotate(-28deg);
+    visibility: hidden;
+}
+
+.little-circle-left
+{
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    left: 6%;
+    top: 18%;
+    border-radius: 50%;
+    border-left: white 2px solid;
+    border-top:  1px solid transparent;
+    border-bottom:  1px solid transparent;
+    border-right:  1px solid transparent;
+}
+
+.little-circle-left .middle-left
+{
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: -10%;
+    top: 50%;
+    background: white;
+    border: none;
+}
+
+.little-circle-left .top-left
+{
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    left: 28%;
+    top: -20%;
+    background: white;
+    border: none;
+}
+
+.little-circle-left .down-left
+{
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    left: 28%;
+    top: 111%;
+    background: white;
+    border: none;
+}
+
+/** 
+* Circles right
+*/
+
+.big-circle-right
+{
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    left: 66%;
+    top: 20%;
+    border-radius: 50%;
+    border-left: white 2px solid;
+    border-top:  1px solid transparent;
+    border-bottom:  1px solid transparent;
+    border-right:  1px solid transparent;
+    transform: rotate(180deg);
+}
+
+.big-circle-right .dot-info-right
+{
+    position: absolute;
+    top: 80%;
+    left: 7.5%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    animation: flashes 1s infinite;
+}
+
+.big-circle-right .dot-info-right:hover
+{
+    animation: stop 1s infinite;
+}
+
+.big-circle-right .dot-info-right:hover .info-right
+{
+    visibility: visible;
+}
+
+.big-circle-right .dot-info-right:hover .info-right-text
+{
+    visibility: visible;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.dot-info-right:hover .info-right-line
+{
+    visibility: visible;
+}
+
+
+
+.big-circle-right .dot-info-right .info-right
+{
+    position: absolute;
+    width: 180px;
+    height: 30px;
+    background: white;
+    top: 188%;
+    left: -925%;
+    visibility: hidden;
+}
+
+.big-circle-right .info-right .info-right-text
+{
+    position: absolute;
+    left: 10%;
+    top: -28%;
+    transform: rotate(180deg);
+    visibility: hidden;
+}
+
+.big-circle-right .info-right-line
+{
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: white;
+    top: 125%;
+    left: -250%;
+    transform: rotate(-28deg);
+    visibility: hidden;
+}
+
+.little-circle-right
+{
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    left: 6%;
+    top: 18%;
+    border-radius: 50%;
+    border-left: white 2px solid;
+    border-top:  1px solid transparent;
+    border-bottom:  1px solid transparent;
+    border-right:  1px solid transparent;
+}
+
+.little-circle-right .middle-right
+{
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: -10%;
+    top: 50%;
+    background: white;
+    border: none;
+}
+
+.little-circle-right .top-right
+{
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    left: 28%;
+    top: -20%;
+    background: white;
+    border: none;
+}
+
+.little-circle-right .down-right
+{
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    left: 28%;
+    top: 111%;
+    background: white;
+    border: none;
+}
+
+@keyframes flashes
+{
+    0%{background: white}
+    50%{background: grey}
+    100%{background: white}
+}
+
+@keyframes stop
+{
+    0%{background: white}
+    100%{background: white}
+}
+
+/** 
+* Presentation
+*/
+
+
+#section1 .presentation
+{
+    position: absolute;
+    width: 600px;
+    height: 450px;
+    top: 30%;
+    left: 32%;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    background: black;
+    line-height: 2.5em;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#section1 .title
+{
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    top: 24%;
+    left: 32%;
+    background: #FFFFFF;
+    font-size: 0.7em;
+}
+
+#section1 .title h1
+{
+    position: absolute;
+    top: -30%;
+    left: 2%;
+    font-family: 'Futura', sans-serif;
+    font-weight: medium;
+}
+
+#section1 .title hr
+{
+    position: absolute;
+    top: 80%;
+    background-color: #FFFFFF;
+    width: 600px;
+    height: 3px;
+    border: 1px white solid;
+}
+
+
+#section1 .presentation .subtitle
+{
+    padding-top: 2%;
+    padding-left: 5%;
+    color: #FFFFFF;
+    font-size: 1.2em;
+}
+
+#section1 .presentation .body
+{
+    padding: 5%;
+    color: #FFFFFF;
+    font-size: 1.0em;
+}
+
+/** 
+* ITEM SCROLL
+*/
+
+.item-scroll
+{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 90%;
+    left: 48%;
+}
+  
+.mouse 
+{
+    width: 24px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #FFFFFF;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 20px);
+}
+  
+.mouse:before, .mouse:after 
+{
+    content: "";
+    display: block;
+    position: absolute;
+}
+  
+.dot:before 
+{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: 10px;
+    left: 40%;
+    background: #FFFFFF;
+    animation: dot-animation 1.2s infinite;
+}
+
+  
+@keyframes dot-animation 
+{
+    0%, 65%, 100% 
+    {
+        opacity: 0;
+    }
+    10%, 40% 
+    {
+        opacity: 1;
+    }
+    0% 
+    {
+        transform: translateY(1px) scale(0.7);
+    }
+    5% 
+    {
+        transform: scale(0.7);
+    }
+    15%, 100% 
+    {
+        transform: scale(1);
+    }
+    45%, 65% 
+    {
+        transform: translateY(24px) scale(0.7);
+    }
+}
+/**
+ * 
+ * 
+ *  RESPONSIVE
+ * 
+ *
+**/
+
+/**
+ *  SECTION 1
+**/
+
+@media (min-width: 768px) and (max-width: 1024px) 
+{
+    
+    #section1 .time
+    {
+        left: 20%;
+    }
+
+    #section1 .date
+    {
+        top: 6%;
+        left: 20%;
+    }    
+    
+    .big-circle-left
+    {
+        left: 5%;
+        top: 28%;
+    }
+
+    .big-circle-right
+    {
+        left: 62%;
+        top: 28%;
+    }
+    
+    #section1 .title
+    {
+        left: 20%;
+        top: 30%;
+    }
+    
+    #section1 .presentation
+    {
+        position: absolute;
+        width: 600px;
+        height: 450px;
+        top: 34%;
+        left: 20%;
+        border-top: 3px solid white;
+        border-bottom: 3px solid white;
+        background: black;
+        line-height: 2.5em;
+        font-family: 'Quicksand', sans-serif;
+    }
+}
