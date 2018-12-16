@@ -1,0 +1,24 @@
+body, html
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/** 
+*
+*
+* ALL SECTION 
+*
+*
+*/
+
+.section
+{
+    position: relative;
+    /* background-image: url('https://images.unsplash.com/photo-1492446190781-58ac4285911d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2194&q=80'); */
+    /* background-color: grey; */
+}
+
+
