@@ -135,7 +135,7 @@
 {
     position: absolute;
     left: 10%;
-    top: -28%;
+    top: 22%;
     visibility: hidden;
 }
 
@@ -182,7 +182,7 @@
     width: 28px;
     height: 2px;
     left: 28%;
-    top: -20%;
+    top: -18%;
     background: white;
     border: none;
 }
@@ -193,7 +193,7 @@
     width: 28px;
     height: 2px;
     left: 28%;
-    top: 111%;
+    top: 113%;
     background: white;
     border: none;
 }
@@ -242,7 +242,7 @@
 .big-circle-right .dot-info-right:hover .info-right-text
 {
     visibility: visible;
-    font-family: 'Quicksand', sans-serif;
+    
 }
 
 .dot-info-right:hover .info-right-line
@@ -261,13 +261,14 @@
     top: 188%;
     left: -925%;
     visibility: hidden;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .big-circle-right .info-right .info-right-text
 {
     position: absolute;
     left: 10%;
-    top: -28%;
+    top: 25%;
     transform: rotate(180deg);
     visibility: hidden;
 }
@@ -315,7 +316,7 @@
     width: 28px;
     height: 2px;
     left: 28%;
-    top: -20%;
+    top: -18%;
     background: white;
     border: none;
 }
@@ -326,7 +327,7 @@
     width: 28px;
     height: 2px;
     left: 28%;
-    top: 111%;
+    top: 113%;
     background: white;
     border: none;
 }
@@ -358,7 +359,7 @@
     left: 32%;
     border-top: 3px solid white;
     border-bottom: 3px solid white;
-    background: black;
+    background: #272727;
     line-height: 2.5em;
     font-family: 'Quicksand', sans-serif;
 }
@@ -377,16 +378,17 @@
 #section1 .title h1
 {
     position: absolute;
-    top: -30%;
+    top: 0%;
     left: 2%;
     font-family: 'Futura', sans-serif;
-    font-weight: medium;
+    color: #272727;
+    font-size: 2.6em;
 }
 
 #section1 .title hr
 {
     position: absolute;
-    top: 80%;
+    top: 100%;
     background-color: #FFFFFF;
     width: 600px;
     height: 3px;
