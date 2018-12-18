@@ -73,9 +73,16 @@
     left: 44.5%;
 }
 
-/*
-* DOT
-*/
+
+.item-scroll
+{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 90%;
+    left: 48%;
+}
+
 .mouse 
 {
     width: 24px;

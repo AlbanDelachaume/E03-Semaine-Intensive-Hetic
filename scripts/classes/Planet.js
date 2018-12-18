@@ -213,12 +213,17 @@ export default class Planet {
 			}
 		}
 
-		if (rings === true) {
+		else if (rings === true) {
 			const ringNumber = Math.floor(Math.random() * 7) + 1
 			return {
 				rings: true,
 				ringNumber: ringNumber
 			}
+		}
+		
+		return {
+			rings: false,
+			moons : false
 		}
 	}
 
