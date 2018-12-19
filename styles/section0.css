@@ -140,6 +140,7 @@
         transform: translateY(24px) scale(0.7);
     }
 }
+
 /*
 * Button Start Experience
 */
@@ -159,7 +160,7 @@
     z-index: 1;
     list-style: none;
 	
-} */
+}
 
 
 
@@ -189,25 +190,59 @@
 #menu li.active a{
 	color: #fff;
 } */
-/* .start 
-{
-    position: absolute;
-    width: 200px;
-    height: 50px;
-    top: 45%;
-    left: 43%;
-    color: white;
-    background: none;
-    border: 2px solid white;
-    cursor: pointer;
-    transition-duration: 0.7s;
-}
+
+a.bttn-dark {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease all;
+  }
+  a.bttn-dark:hover {
+    color: #644cad;
+  }
+  a.bttn-dark:focus {
+    color: #644cad;
+  }
   
-.start:hover 
-{
-  background-color: white ;
-  color:#000000;
-} */
+  .bttn-dark {
+    position: absolute;
+    left: 42%;
+    top: 45%;
+    font-size: 14px;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-family: "futura";
+    text-align: center;
+    width: 270px;
+    padding: 14px 0px;
+    border: 3px solid #ffffff;
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  .bttn-dark:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #ffffff;
+    z-index: -1;
+    transition: 0.6s all ease;
+  }
+  .bttn-dark:hover:before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transition: 0.6s all ease;
+  }
+  .bttn-dark:focus:before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transition: 0.6s all ease;
+  }
 
 /**
  * 

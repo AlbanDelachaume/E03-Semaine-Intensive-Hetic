@@ -86,22 +86,22 @@ export default class Planet {
 	getPlanetAtmosphereComposition(_isgas) {
 		//Composition de l'atmosphère parmis les gaz suivants 
 		const available = [
-			'Argon',
-			'O2',
-			'CO',
-			'H2O',
-			'Monoxyde d’azote',
-			'Néon',
-			'Krypton',
-			'Xénon',
-			'Ozone',
-			'Méthane',
-			'Hélium',
-			'Dioxyde de soufre',
-			'Oxygène',
-			'Sodium',
-			'Hydrogène',
-			'Azote'
+			'Argon ',
+			'O2 ',
+			'CO ',
+			'H2O ',
+			'Monoxyde d’azote ',
+			'Néon ',
+			'Krypton ',
+			'Xénon ',
+			'Ozone ',
+			'Méthane ',
+			'Hélium ',
+			'Dioxyde de soufre ',
+			'Oxygène ',
+			'Sodium ',
+			'Hydrogène ',
+			'Azote '
 		]
 
 		const elements = [
@@ -128,14 +128,14 @@ export default class Planet {
 			if (this.atmosphere.composition.includes('H2O')) {
 
 				if (this.temperature < 0) {
-					return 'water is solid'
+					return "à l'état solide"
 				} else if (0 < this.temperature && this.temperature < 100) {
-					return 'water is liquid'
+					return "à l'état liquide"
 				} else {
-					return 'water is gas'
+					return "à l'état gazeux"
 				}
 			} else {
-				return 'no water on this planet'
+				return "non présente"
 			}
 		}
 	}
@@ -154,7 +154,7 @@ export default class Planet {
 	getPlanetPressure() {
 		//Pression atmosphérique en bar
 		if (this.type === 1) {
-			return (Math.random() * 50) + 0, 1
+			return (Math.random() * 50) + 0.1
 		} else if (this.type === 2) {
 			return (Math.random() * 25) + 50
 		} else {

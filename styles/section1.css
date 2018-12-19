@@ -77,7 +77,7 @@
     width: 90%;
     height: 50%;
     top: 40%;
-    left: 6%;
+    left: 8%;
     z-index: 1;
 }
 
@@ -107,14 +107,14 @@
 .data-hover-7
 {
     position: absolute;
-    width: 25%;
+    width: 15%;
     height: 100%;
     border-left: 1px solid white;
     border-top: 1px solid white;
     top: -50%;
     visibility: hidden;
     z-index: 1;
-    margin-left: 1%;
+    margin-left: 3%;
     margin-top: -10%;
     font-family: 'Quicksand', sans-serif;
 }
@@ -128,13 +128,13 @@
 .data_title_hover-7
 {
     position: absolute;
-    width: 25%;
+    width: 15%;
     height: 10%;
     top: -61%;
     visibility: hidden;
     z-index: 1;
-    margin-left: 1%;
-    margin-top: -10%;
+    margin-left: 3%;
+    margin-top: -9.5%;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -146,7 +146,7 @@
 .data-hover-6 p,
 .data-hover-7 p
 {
-    padding-left: 3%;
+    padding-left: 5%;
     padding-top: 2%;
     color: #ffffff;
 }
@@ -159,13 +159,25 @@
 .data_title_hover-6 p,
 .data_title_hover-7 p
 {
-    padding-left: 3%;
-    color: #ffffff;
+    padding-left: 5%;
+    background: #ffffff;
+    color: black;
     font-family: 'Futura', sans-serif
 }
 
+.eliminate 
+{
+width: 250px;
+height: 10%;
+background-image: url(../images/close.png);
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+padding-top: 10%;
+margin: 35% 0;
+}
 
-.planet-1:hover .data-hover-1,
+/* .planet-1:hover .data-hover-1,
 .planet-2:hover .data-hover-2,
 .planet-3:hover .data-hover-3,
 .planet-4:hover .data-hover-4,
@@ -186,7 +198,7 @@
 {
     visibility: visible;
 }
-
+ */
 
 
 
@@ -215,16 +227,13 @@
     font-size: 2em;
 }
 
-.text-presentation
-{
+h1 {
     position: absolute;
-    color: #ffffff;
     top: 45%;
-    left: 10%;
-    width: 35%;
-    font-family: 'Quicksand', sans-serif;
-    line-height: 1.8;
-    font-size: 1.2em;
+    left: 35%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6em;
+    color: #ffffff;
 }
 
 .img-presentation
@@ -270,6 +279,87 @@
     transform: rotateY(180deg);
     cursor: pointer;
 }
+
+.div-spaceman .div-bubble
+{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    left: -60%;
+    bottom: 100%;
+    width: 60%;
+    height: 35%;
+    background: #ffffff;
+    border-radius: 60%;
+}
+
+.div-spaceman .div-bubble-1
+{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 10%;
+    left: 25%;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.div-spaceman .div-bubble-2
+{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -10%;
+    left: 5%;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.div-bubble .little-bubble-1
+{
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    width: 10px;
+    height: 10px;
+    background: #6B44BF;
+    border-radius: 50%;
+    animation: bubble infinite 1s;
+}
+.div-bubble .little-bubble-2
+{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    width: 10px;
+    height: 10px;
+    background: #6B44BF;
+    border-radius: 50%;
+    animation: bubble infinite 1s;
+    animation-delay: 0.25s;
+}
+
+.div-bubble .little-bubble-3
+{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width: 10px;
+    height: 10px;
+    background: #6B44BF;
+    border-radius: 50%;
+    animation: bubble infinite 1s;
+    animation-delay: 0.5s;
+}
+
+@keyframes bubble
+{
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(-10px);}
+    100%{transform: translateY(0px);}
+}
+
+
 
 .div-spaceman img
 {
@@ -332,7 +422,7 @@
 {
     position: absolute;
     top: 70%;
-    left: 55%;
+    left: 50%;
     width: 7.5rem;
     height: 2.5rem;
     border-radius: 34px;
@@ -376,6 +466,22 @@
     cursor: pointer;
 } 
 .button-previous-atmosphere
+{
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    width: 7.5rem;
+    height: 2.5rem;
+    border-radius: 34px;
+    background: radial-gradient( #5227C7, #6B44BF);
+    color: white;
+    font-family: 'Futura', sans-serif;
+    padding-top: 1%;
+    padding-left: 2%;
+    cursor: pointer;
+} 
+
+.button-previous-cycle
 {
     position: absolute;
     top: 70%;

@@ -44,21 +44,20 @@ export default class AltPlanet {
     getAltPlanetAtmosphereComposition(_isgas) {
         //Composition de l'atmosphère parmis les gaz suivants 
         const available = [
-            'Argon',
-            'CO',
-            'H2O',
-            'Monoxyde d’azote',
-            'Néon',
-            'Krypton',
-            'Xénon',
-            'Ozone',
-            'Méthane',
-            'Hélium',
-            'Dioxyde de soufre',
-            'Oxygène',
-            'Sodium',
-            'Hydrogène',
-            'Azote'
+            'Argon ',
+			'CO ',
+			'Monoxyde d’azote ',
+			'Néon ',
+			'Krypton ',
+			'Xénon ',
+			'Ozone ',
+			'Méthane ',
+			'Hélium ',
+			'Dioxyde de soufre ',
+			'Oxygène ',
+			'Sodium ',
+			'Hydrogène ',
+			'Azote '
         ]
 
         const elements = [
@@ -83,9 +82,9 @@ export default class AltPlanet {
         // Etat de l'eau sur la planète s'il y en a 
 
         if (this.temperature < 0) {
-            return 'water is solid'
+            return "à l'état solide"
         } else {
-            return 'water is liquid'
+            return "à l'état liquide"
         }
 
     }
@@ -97,7 +96,7 @@ export default class AltPlanet {
 
     getAltPlanetPressure() {
         // Pression atmosphérique en bar
-        return (Math.random() * 1.2) + 0, 8
+        return (Math.random() * 1.2) + 0.8
     }
 
     getAltPlanetTemperature() {
@@ -113,7 +112,7 @@ export default class AltPlanet {
 
     getAltPlanetYear() {
         // cycle annuel en années
-        return Math.floor((Math.random() * 1.2) + 0, 8)
+        return Math.floor((Math.random() * 1.2) + 0.8)
     }
 
     getAltPlanetDay() {

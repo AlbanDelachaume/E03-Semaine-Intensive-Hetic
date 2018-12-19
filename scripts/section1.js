@@ -4,26 +4,27 @@
 
 const T = () =>
 {
-    const $time_write = document.querySelector('.time')
+const $time_write = document.querySelector('.time')
 
-    const time = new Date()
+const time = new Date()
 
-    const $hours = time.getHours()
-    const $minutes = time.getMinutes()
-    const $seconds = time.getSeconds()
+const $hours = time.getHours()
+const $minutes = time.getMinutes()
+const $seconds = time.getSeconds()
 
-    $time_write.textContent = `${$hours} : ${$minutes} : ${$seconds}`
 
-    // if($minutes < 10)
-    // {
-    //     $minutes = "0" + $minutes;
-    // }
 
-    // if($seconds < 10)
-    // {
-    //     $seconds = "0" + $seconds;
-    // } 
+if($minutes < 10)
+{
+$time_write.textContent = `${$hours} : 0${$minutes} : ${$seconds}`
+}else if($seconds < 10)
+{
+$time_write.textContent = `${$hours} : ${$minutes} : 0${$seconds}`
+} else{
+$time_write.textContent = `${$hours} : ${$minutes} : ${$seconds}`
+} 
 }
+
 
 setInterval('T()',1000);
 
