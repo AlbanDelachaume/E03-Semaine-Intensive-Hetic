@@ -1,0 +1,209 @@
+/** 
+* Time / Date
+*/
+
+.time
+{
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    top: 2%;
+    left: 12%;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    z-index: 4;
+}
+
+.date
+{
+    position: absolute;
+    width: 250px;
+    height: 28px;
+    top: 7%;
+    left: 12%;
+    font-family: 'Quicksand', sans-serif;
+    z-index: 4;
+}
+
+/** 
+* logo
+*/
+
+.logoBlack
+{
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    top: 2%;
+    left: 1%;
+    border-right: solid #6B44BF 3px;
+    z-index: 3;
+}
+
+.logoBlack .logo-HW-black
+{
+    position: absolute;
+    max-width: 90%;
+    height: auto;
+    
+}
+
+/*
+* Parallax
+*/
+.container-parallax
+{
+    width: 100%;
+    height: 100%;
+}
+.bg
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 1%;
+    z-index: 2;
+
+}
+.lazy
+{
+    opacity: 0;
+    transition: opacity 1s;
+    will-change: opacity;
+}
+
+.lazy.loaded
+{
+    opacity: 1;
+}
+
+.parallax-scroll
+{
+    will-change: transform;
+}
+
+.container-parallax
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    overflow: hidden;
+}
+
+.container-parallax .image 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+
+}
+
+.container-parallax .image .inner
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    background-position: center center;
+    background-size: cover;
+    z-index: 1;
+    transition: transform 1s cubic-bezier(0.13, 0.34, 0.16, 0.93);
+}
+
+#planet1, #planet2
+{
+    position: absolute;
+    z-index: 3;
+}
+
+/*
+* Text
+*/
+.information
+{
+    position: absolute;
+    display: grid;
+    width: 60%;
+    height: 25%;
+    top: 33%;
+    left: 4%;
+    z-index: 4;
+}
+
+.information-title
+{
+    font-family: 'futura', sans-serif;
+    font-size: 30px;
+    color: #6B44BF;
+    padding-bottom: 30px;
+}
+
+.information-text1,.information-text2,.information-text3
+{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    color: #272727;
+    padding-bottom: 30px;
+}
+
+.information span
+{
+    font-weight: bold;
+    color: #6B44BF;
+}
+
+/*
+* Button
+*/
+
+.button
+{
+    position: relative;
+    top: -40%;
+    width: 9rem;
+    height: 2.5rem;
+    transition: all .4s ease-in-out;
+}
+
+.button:hover
+{
+    transform: scale(0.9);
+}
+
+.information-button
+{
+    position: absolute;
+    width: 9rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    color: white;
+    font-family: 'futura', sans-serif;
+    font-size: 20px;
+    padding-left: 30%;
+    cursor: pointer;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.70);
+}
+
+.information-button:hover 
+{
+    background-position: 100% 0;
+    transition: all .6s ease-in-out;
+}
+
+.arrow
+{
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 35px;
+    height: 20px;
+    cursor: pointer;
+}
