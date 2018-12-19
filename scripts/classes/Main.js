@@ -4,6 +4,7 @@ import AltPlanet from './AltPlanet.js'
 export default class Main {
 	constructor() {
 		this.planets = []
+		this.eliminatePlanetNumber = 0
 		this.createPlanets()
 	}
 
@@ -161,22 +162,55 @@ export default class Main {
 		}
 		
 		eliminatePlanet(planetEliminate, newPlanet)
-		{
-		let index = true
-		planetEliminate.addEventListener('click', ()=>
-		{
-		if (index === true){
-		newPlanet.style.opacity = '1'
-		index = false
-		} else {
-		newPlanet.style.opacity = '0.5'
-		index = true
-		}
-		
-		})
-		}
-		
-		}
+{
+let index = 0
+
+planetEliminate.addEventListener('click', () =>
+{
+if (index === 0){
+newPlanet.style.opacity = '0.5'
+index = 1
+this.eliminatePlanetNumber += 1
+} else {
+newPlanet.style.opacity = '1'
+index = 0
+this.eliminatePlanetNumber -= 1
+}
+if (this.checkGameOver()) {
+const container = document.querySelector('#section1')
+const goodbye = document.createElement('div')
+const content = document.createElement('div')
+const txt = document.createElement('div')
+const gbyebtn = document.createElement('div')
+
+goodbye.classList.add('results')
+content.classList.add('content')
+txt.classList.add('text')
+gbyebtn.classList.add('button-continue')
+
+gbyebtn.addEventListener('click', () => window.location = '/')
+
+txt.innerText = "Ooopsi, vous n'avez pas trouvé la planète habitable"
+gbyebtn.innerText = "Rédmarrer le jeu"
+
+content.appendChild(txt)
+content.appendChild(gbyebtn)
+goodbye.appendChild(content)
+container.appendChild(goodbye)
+}
+
+})
+}
+
+checkGameOver() {
+if (this.planets.length - 1 === this.eliminatePlanetNumber) {
+return true
+} else {
+return false
+}
+}
+
+}
 
 const popup_presentation = () =>
 {
@@ -191,10 +225,13 @@ const popup_presentation = () =>
 	presentation.appendChild(title_presentation)
 	title_presentation.textContent = "Bienvenue “aventurier(e)” dans Home Away. "
 
-	const text_presentation = document.createElement('p')
-	text_presentation.classList.add('text-presentation')
+	const text_presentation = document.createElement('div')
+	text_presentation.classList.add('text-animation')
 	presentation.appendChild(text_presentation)
-	text_presentation.textContent = "Je vous attendais ! J'espère que vous êtes prêt(e) à voyager dans l’espace, car oui, tout est possible aujourd’hui !"
+
+	const text_presentation_p = document.createElement('p')
+	text_presentation.appendChild(text_presentation_p)
+	text_presentation_p.textContent = "Je vous attendais ! J'espère que vous êtes prêt(e) à voyager dans l’espace, car oui,"
 
 	const button_presentation = document.createElement('a')
 	button_presentation.classList.add('button-presentation')
@@ -289,7 +326,7 @@ const lesson = () =>
 		const text_name = document.createElement('p')
 		text_name.classList.add('text-physics')
 		lesson_name.appendChild(text_name)
-		text_name.textContent = textChoice()
+		text_name.innerHTML = textChoice()
 
 		const button_next = document.createElement('a')
 		button_next.classList.add('button-next-physics')
@@ -363,10 +400,10 @@ const lesson = () =>
 		lesson_name.classList.add('lesson-atmosphere')
 
 		title_name.classList.add('title-atmosphere')
-		title_name.textContent = "Atmosphère"
+		title_name.textContent = titleChoice()
 
 		text_name.classList.add('text-atmosphere')
-		text_name.textContent = "bloblo"
+		text_name.innerHTML = textChoice()
 		text_name.style.display = `block`
 
 		
@@ -374,8 +411,6 @@ const lesson = () =>
 		button_next.classList.remove('button-next-physics')
 
 		button_previous.classList.add('button-previous-atmosphere')
-
-		
 	}
 	else if(index === 1)
 	{
@@ -385,16 +420,15 @@ const lesson = () =>
 		lesson_name.classList.add('lesson-cycle')
 
 		title_name.classList.add('title-cycle')
-		title_name.textContent = "Cycles"
+		title_name.textContent = titleChoice()
 
 		text_name.classList.add('text-cycle')
-		text_name.textContent = "bloblo"
+		text_name.innerHTML = textChoice()
 		text_name.style.display = `block`
 		
 		
 		button_next.classList.add('button-next-cycle')
 		button_next.classList.remove('button-next-atmosphere')
-
 
 	}
 	else if( index === 2)
@@ -406,10 +440,10 @@ const lesson = () =>
 		lesson_name.classList.add('lesson-interne')
 
 		title_name.classList.add('title-interne')
-		title_name.textContent = "Caractéristique internes"
+		title_name.textContent = titleChoice()
 
 		text_name.classList.add('text-interne')
-		text_name.textContent = "blibli"
+		text_name.innerHTML = textChoice()
 		text_name.style.display = `block`
 
 		button_next.classList.add('button-next-interne')
@@ -438,10 +472,10 @@ const lesson = () =>
 		lesson_name.classList.add('lesson-physics')
 
 		title_name.classList.add('title-physics')
-		title_name.textContent = "Caractéristiques physiques"
+		title_name.textContent = titleChoice()
 
 		text_name.classList.add('text-physics')
-		text_name.textContent = "La composition de l’atmosphère est extrêmement importante. Elle permet à l’eau de passer de l’état gazeux à l’état gazeux. Pour se faire, l’atmosphère de la planète en question doit être composé exactement de 74% d’hydrogène, de 24% d’hélium, de 1% d’oxygène et tous les autres éléments réunis ne représentent que 1% de la matière ordinaire."
+		text_name.innerHTML = textChoice()
 		text_name.style.display = `block`
 
 		button_previous.classList.add('button-previous-physics')
@@ -455,10 +489,10 @@ const lesson = () =>
 		lesson_name.classList.add('lesson-atmosphere')
 
 		title_name.classList.add('title-atmosphere')
-		title_name.textContent = "Atmosphère"
+		title_name.textContent = titleChoice()
 
 		text_name.classList.add('text-atmosphere')
-		text_name.textContent = "bloblo"
+		text_name.innerHTML = textChoice()
 		text_name.style.display = `block`
 
 		button_previous.classList.remove('button-previous-physics')
@@ -473,10 +507,10 @@ const lesson = () =>
 		lesson_name.classList.add('lesson-cycle')
 
 		title_name.classList.add('title-cycle')
-		title_name.textContent = "Cycle"
+		title_name.textContent = titleChoice()
 
 		text_name.classList.add('text-cycle')
-		text_name.textContent = "bloblo"
+		text_name.innerHTML = textChoice()
 		text_name.style.display = `block`
 
 		button_previous.classList.remove('button-previous-interne')
@@ -505,25 +539,30 @@ lesson()
 const textChoice = ()=>{
 	switch(index){
 		case 0:
-			return "La composition de l’atmosphère est extrêmement importante. Elle permet à l’eau de passer de l’état gazeux à l’état gazeux. Pour se faire, l’atmosphère de la planète en question doit être composé exactement de 74% d’hydrogène, de 24% d’hélium, de 1% d’oxygène et tous les autres éléments réunis ne représentent que 1% de la matière ordinaire."
+			return `<p>La distance idéale pour une planète se situerait entre 100 millions de kilomètres et 300 millions de kilomètres.</p>
+					<p>La gravité idéale pour l’épanouissement de l’être humain se situe entre 5 et 11 m/s^-2, sachant que sur Terre sa valeur est de 9,8 m/s^-2.</p>`
 		
 		case 1 :
-			return "2"
+			return `<p>Une atmosphère idéale doit comporter au moins du carbone, de l'hydrogène, de l'oxygène et de l'azote.</p>
+					<p>La pression atmosphérique idéale se trouver entre 0,8 et 2 bar, sachant que la Terre a une pression atmosphérique d’1 bar au niveau de la mer.</p>`
 		
 		case 2 :
-			return "3"
+			return `<p>le cycle annuel est important pour l’homme car il influe directement sur sa condition de vie. Un cycle de vie optimal doit être compris entre 0,8 et 2 ans.</p>
+			<p>Le cycle journalier est lui aussi très important, il permet l’équilibre de l’être humain. Un cycle idéal se situerait entre 20h et 28h terrestre.</p>
+			<p>Les satellites sont très importants car ils permettent de stabiliser la planète sur son axe de rotation et de créer des cycles réguliers.</p>`
 		
 		case 3 :
-			return "4"
+			return `<p>L’eau est nécessaire à la survie de n’importe quel corps sur une planète, mais il est aussi important de noter son état. En effet, il est fortement préférable qu’elle soit présente sous forme solide ou liquide.</p>
+					<p>La température idéale peut quand à elle se situer entre -100°C et 60°C pour assurer un maintien de l’eau à l’état liquide ou solide et ainsi rendre la planète habitable</p>`
 		
-		default:
+		default:   
 	}
 }
 
 const titleChoice = ()=>{
 	switch(index){
 		case 0:
-				return "Composition physique"
+				return "Caractéristiques physique"
 		
 		case 1 :
 			return "Atmosphère"
@@ -533,8 +572,9 @@ const titleChoice = ()=>{
 		
 		case 3 :
 
-			return "Composition interne"
+			return "Caractéristiques interne"
 		
 		default:
 	}
 }
+

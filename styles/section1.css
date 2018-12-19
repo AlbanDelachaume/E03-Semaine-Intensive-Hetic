@@ -220,11 +220,111 @@ margin: 35% 0;
     position: absolute;
     color: #ffffff;
     top: 30%;
-    left: 10%;
+    left: 7%;
     width: 55%;
     font-family: 'Quicksand', sans-serif;
     line-height: 1.8;
-    font-size: 2em;
+    font-size: 2.2em;
+}
+
+
+/* .text-animation
+{
+    position: absolute;
+} */
+
+.text-animation p 
+{
+    width: 100%;
+    left: 7%;
+    top: 40%;
+    border-right: .15em solid #6B44BF;
+    font-family: "Quicksand";
+    font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+    color: white;
+    
+}
+
+.text-animation p:nth-child(1) 
+{
+    position: absolute;
+    top: 40%;
+    width: 51%;
+    opacity: 0;
+    animation: type1 1.5s steps(500, end);
+    animation-fill-mode: forwards;
+}
+  
+  @keyframes type1 {
+    0% {
+        width: 0;
+      }
+      1% {
+        opacity: 1;
+      }
+      99.9% {
+        border-right: .15em solid #6B44BF;
+      }
+      100% {
+        opacity: 1;
+        border: none;
+      }
+    }
+  
+  @keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid #6B44BF;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+  
+  @keyframes type3 {
+    0% {
+        width: 0;
+      }
+      1% {
+        opacity: 1;
+      }
+      99.9% {
+        border-right: .15em solid #6B44BF;
+      }
+      100% {
+        opacity: 1;
+        border: none;
+      }
+    }
+  
+    @keyframes type4 {
+        0% {
+            width: 0;
+          }
+          1% {
+            opacity: 1;
+          }
+          99.9% {
+            border-right: .15em solid #6B44BF;
+          }
+          100% {
+            opacity: 1;
+            border: none;
+          }
+        }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
 }
 
 h1 {
@@ -410,7 +510,7 @@ h1 {
 {
     position: absolute;
     color: #272727;
-    top: 35%;
+    top: 30%;
     left: 20%;
     width: 65%;
     font-family: 'Quicksand', sans-serif;
@@ -421,7 +521,7 @@ h1 {
 .button-next-physics
 {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     width: 7.5rem;
     height: 2.5rem;
@@ -437,7 +537,7 @@ h1 {
 .button-next-atmosphere
 {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     width: 7.5rem;
     height: 2.5rem;
@@ -453,7 +553,7 @@ h1 {
 .button-previous-physics
 {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 35%;
     width: 7.5rem;
     height: 2.5rem;
@@ -468,7 +568,7 @@ h1 {
 .button-previous-atmosphere
 {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 35%;
     width: 7.5rem;
     height: 2.5rem;
@@ -484,7 +584,7 @@ h1 {
 .button-previous-cycle
 {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 35%;
     width: 7.5rem;
     height: 2.5rem;
@@ -500,7 +600,7 @@ h1 {
 .button-next-cycle
 {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     width: 7.5rem;
     height: 2.5rem;
@@ -516,7 +616,7 @@ h1 {
 .button-next-interne
 {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     width: 7.5rem;
     height: 2.5rem;
@@ -562,4 +662,47 @@ h1 {
 {
     width: 120%;
     height: auto;
+}
+
+.results
+{
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(0,0,0,0.6);
+z-index: 3000;
+display: flex;
+width: 100%;
+height: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.results > .content
+{
+width: 400px;
+height: 200px;
+background-color: #fff;
+border-radius: 5px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.results .text
+{
+color: black;
+font-size: 16px;
+}
+
+.results .button-continue
+{
+cursor: pointer;
+padding: 12px 25px;
+background-color: pink;
+margin-top: 25px;
+color: white;
+font-size: 14px;
 }
