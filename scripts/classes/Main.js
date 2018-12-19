@@ -9,7 +9,7 @@ export default class Main {
 
 
 	createPlanets() {
-		const randNum = Math.floor(Math.random() * 5) + 2
+		const randNum = Math.floor(Math.random() * 2) + 5
 		for (var i = 0; i < randNum; i++) {
 			this.planets.push(new Planet())
 		}
@@ -45,6 +45,11 @@ export default class Main {
 			const data_hover = document.createElement('div')
 			planetElement.classList.add(`planet-${i+1}`)
 			data_hover.classList.add(`data-hover-${i+1}`)
+
+			const data_title_hover = document.createElement('div')
+			data_title_hover.classList.add(`data_title_hover-${i+1}`)
+
+
 			planetElement.setAttribute(`is-${this.planets[i].distance}`, '')
 			
 			this.planetWidth(planetElement, i)
@@ -54,7 +59,7 @@ export default class Main {
 			if (planetAttribute) {
 				if (planetAttribute.rings === true)
 				{
-					const randImg = Math.floor(Math.random() * 5) + 1
+					const randImg = Math.floor(Math.random() * 14) + 1
 					planetElement.style.backgroundImage = `url('/images/rings/${randImg}.png')`
 					planetElement.style.backgroundSize = `contain`
 					planetElement.style.backgroundPosition = `center`
@@ -62,7 +67,7 @@ export default class Main {
 				}
 				else
 				{
-					const randImg = Math.floor(Math.random() * 5) + 1
+					const randImg = Math.floor(Math.random() * 14) + 1
 					planetElement.style.backgroundImage = `url('/images/nothing/${randImg}.png')`
 					planetElement.style.backgroundSize = `contain`
 					planetElement.style.backgroundPosition = `center`
@@ -70,17 +75,13 @@ export default class Main {
 				}
 			}
 
-			// data_hover.style.position = `absolute`
-			// data_hover.style.background = `white`
-			// data_hover.style.width = `8%`
-			// data_hover.style.height = `40%`
-			// data_hover.style.left = `3%`
-			// data_hover.style.top = `-18%`
-			// data_hover.style.visibility = `hidden`
-			
 			planets_create.appendChild(planetElement)
 			planetElement.appendChild(data_hover)
+			planetElement.appendChild(data_title_hover)
 			console.log(planetElement)
+
+			this.planetDatas(data_hover, i)
+			this.planetName(data_title_hover, i)
 		}
 	}
 
@@ -100,6 +101,58 @@ export default class Main {
 			widthStyle.style.height = '60%'
 		}
 	}
+
+	planetName(data_title_hover, i)
+	{
+		const seeName = this.planets[i].name
+
+		data_title_hover.innerHTML = `<p>${seeName}</p>`
+		
+	}
+
+	planetDatas(data_hover, i)
+	{
+
+	const seeDistance = this.planets[i].distance
+	const seeWeight = this.planets[i].weight
+	const seeComposition = this.planets[i].atmosphere.composition
+	const seeTemperature = this.planets[i].temperature
+	const seeWater = this.planets[i].liquid
+	const seeGravity = this.planets[i].gravity 
+	const seeYear = this.planets[i].year
+	const seeDay = this.planets[i].day
+	const seeMoon = this.planets[i].attribute.moons
+	
+	
+	
+	if(seeMoon === true)
+	{
+	
+	data_hover.innerHTML = `
+	<p> Distance = ${Math.floor(seeDistance)} million km (10^6)</p>
+	<p> Masse = ${Math.round(seeWeight * 100) / 100} * 10^24 kg
+	<p> Atmosphère = ${seeComposition}</p>
+	<p> Température = ${seeTemperature} °C </p>
+	<p> Eau ${seeWater}</p>
+	<p> Gravité = ${Math.round(seeGravity * 100) / 100} m/s^(-2)</p>
+	<p> Cycle annuel = ${Math.round(seeYear * 100) / 100} an(s)</p>
+	<p> Cycle journalier = ${seeDay} h</p>
+	<p>Possède ${this.planets[i].attribute.moonNumber} lunes</p>`
+	} 
+	else 
+	{
+	data_hover.innerHTML = `
+	<p> Distance = ${Math.floor(seeDistance)} million km (10^6)</p>
+	<p> Masse = ${Math.round(seeWeight * 100) / 100} * 10^24 kg
+	<p> Atmosphère = ${seeComposition}</p>
+	<p> Température = ${seeTemperature} °C </p>
+	<p> Eau ${seeWater}</p>
+	<p> Gravité = ${Math.round(seeGravity * 100) / 100} m/s^(-2)</p>
+	<p> Cycle annuel = ${Math.round(seeYear * 100) / 100} an(s)</p>
+	<p> Cycle journalier = ${seeDay} h</p>
+	<p>Ne possède pas de lune</p>`
+	}	
+}
 
 	
 
@@ -144,9 +197,217 @@ const popup_presentation = () =>
 		text_presentation.style.display = `none`
 		button_presentation.classList.remove('button-presentation')
 		img_presentation.classList.remove('img-presentation')
-		
 	})
 	
 }
 popup_presentation()
 
+const lesson = () =>
+{
+
+	const section_1 = document.querySelector('#section1')
+
+	const div_spaceman = document.createElement('div')
+	div_spaceman.classList.add('div-spaceman')
+	section_1.appendChild(div_spaceman)
+
+	const img_spaceman = document.createElement('img')
+	div_spaceman.appendChild(img_spaceman)
+	img_spaceman.src = `../images/spaceman.png` 
+	img_spaceman.alt = `spaceman`
+
+	const div_book = document.createElement('div')
+	div_book.classList.add('div-book')
+	section_1.appendChild(div_book)
+
+	const img_book = document.createElement('img')
+	div_book.appendChild(img_book)
+	img_book.src = `../images/book.png` 
+	img_book.alt = `book`
+
+	div_spaceman.addEventListener('click', () =>
+	{
+	
+		const section_1 = document.querySelector('#section1')
+		const lesson = document.createElement('div')
+		lesson.classList.add('lesson')
+		section_1.appendChild(lesson)
+
+		const lesson_name = document.createElement('div')
+		lesson_name.classList.add('lesson-physics')
+		lesson.appendChild(lesson_name)
+		
+		const title_name = document.createElement('h2')
+		title_name.classList.add('title-physics')
+		lesson_name.appendChild(title_name)
+		title_name.textContent = "Caractéristiques physiques"
+
+		const text_name = document.createElement('p')
+		text_name.classList.add('text-physics')
+		lesson_name.appendChild(text_name)
+		text_name.textContent = "La composition de l’atmosphère est extrêmement importante. Elle permet à l’eau de passer de l’état gazeux à l’état gazeux. Pour se faire, l’atmosphère de la planète en question doit être composé exactement de 74% d’hydrogène, de 24% d’hélium, de 1% d’oxygène et tous les autres éléments réunis ne représentent que 1% de la matière ordinaire."
+
+		const button_next = document.createElement('a')
+		button_next.classList.add('button-next-physics')
+		lesson_name.appendChild(button_next)
+		button_next.textContent = "SUIVANT"
+
+		const button_previous = document.createElement('a')
+		button_previous.classList.add('button-previous-physics')
+		lesson_name.appendChild(button_previous)
+		button_previous.textContent = "PRÉCÉDENT"
+
+		const div_cross = document.createElement('div')
+		div_cross.classList.add('div-cross')
+		lesson.appendChild(div_cross)
+
+		const img_cross = document.createElement('img')
+		div_cross.appendChild(img_cross)
+		img_cross.classList.add('img-cross')
+		img_cross.src = `../images/cross.png` 
+		img_cross.alt = `cross`
+
+		
+	div_cross.addEventListener('click', () =>
+	{
+		div_cross.classList.remove('div-cross')
+		img_cross.style.visibility = `hidden`
+		lesson.classList.remove('lesson')
+		text_name.classList.remove('text-name')
+		text_name.style.display = `none`
+		title_name.classList.remove('title-name')
+		title_name.style.display = `none`
+		button_next.style.display = `none`
+		button_previous.style.display = `none`
+	})
+
+	button_next.addEventListener('click', () =>
+	{
+
+	if(index === 0)
+	{
+		index++
+		// console.log(index)
+		lesson.classList.add('lesson')
+		lesson_name.classList.add('lesson-atmosphere')
+
+		title_name.classList.add('title-atmosphere')
+		title_name.textContent = "Atmosphère"
+
+		text_name.classList.add('text-atmosphere')
+		text_name.textContent = "bloblo"
+		text_name.style.display = `block`
+
+		
+		button_next.classList.add('button-next-atmosphere')
+		button_next.classList.remove('button-next-physics')
+
+		button_previous.classList.add('button-previous-atmosphere')
+
+		
+	}
+	else if(index === 1)
+	{
+		index++
+		console.log(index)
+		lesson.classList.add('lesson')
+		lesson_name.classList.add('lesson-cycle')
+
+		title_name.classList.add('title-cycle')
+		title_name.textContent = "Cycles"
+
+		text_name.classList.add('text-cycle')
+		text_name.textContent = "bloblo"
+		text_name.style.display = `block`
+		
+		
+		button_next.classList.add('button-next-cycle')
+		button_next.classList.remove('button-next-atmosphere')
+
+
+	}
+	else if( index === 2)
+	{
+		
+		index++
+		console.log(index)
+		lesson.classList.add('lesson')
+		lesson_name.classList.add('lesson-interne')
+
+		title_name.classList.add('title-interne')
+		title_name.textContent = "Caractéristique internes"
+
+		text_name.classList.add('text-interne')
+		text_name.textContent = "blibli"
+		text_name.style.display = `block`
+
+		button_next.classList.add('button-next-interne')
+		button_next.classList.remove('button-next-cycle')
+	}
+	})	
+	
+	
+	button_previous.addEventListener('click', () =>
+	{
+	if(index === 1)
+	{
+		index--
+		console.log(index)
+		lesson.classList.add('lesson')
+		lesson_name.classList.add('lesson-physics')
+
+		title_name.classList.add('title-physics')
+		title_name.textContent = "Caractéristiques physiques"
+
+		text_name.classList.add('text-physics')
+		text_name.textContent = "La composition de l’atmosphère est extrêmement importante. Elle permet à l’eau de passer de l’état gazeux à l’état gazeux. Pour se faire, l’atmosphère de la planète en question doit être composé exactement de 74% d’hydrogène, de 24% d’hélium, de 1% d’oxygène et tous les autres éléments réunis ne représentent que 1% de la matière ordinaire."
+		text_name.style.display = `block`
+
+		button_previous.classList.add('button-previous-physics')
+		button_previous.classList.remove('button-previous-atmosphere')
+	}
+	else if(index === 2)
+	{
+		index--
+		console.log(index)
+		lesson.classList.add('lesson')
+		lesson_name.classList.add('lesson-atmosphere')
+
+		title_name.classList.add('title-atmosphere')
+		title_name.textContent = "Atmosphère"
+
+		text_name.classList.add('text-atmosphere')
+		text_name.textContent = "bloblo"
+		text_name.style.display = `block`
+
+		button_previous.classList.remove('button-previous-physics')
+		button_previous.classList.add('button-previous-cycle')
+	}
+	else if( index === 3)
+	{
+		
+		index--
+		console.log(index)
+		lesson.classList.add('lesson')
+		lesson_name.classList.add('lesson-cycle')
+
+		title_name.classList.add('title-cycle')
+		title_name.textContent = "Cycle"
+
+		text_name.classList.add('text-cycle')
+		text_name.textContent = "bloblo"
+		text_name.style.display = `block`
+
+		button_previous.classList.remove('button-previous-interne')
+		button_previous.classList.add('button-previous-cycle')
+	}
+	})	
+
+})
+}
+
+let index = 0
+lesson()
+
+
+	
