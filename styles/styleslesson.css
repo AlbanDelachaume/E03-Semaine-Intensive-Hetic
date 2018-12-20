@@ -1,0 +1,557 @@
+body, html
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: #FFFFFF;
+}
+
+/** 
+*
+*
+* SECTION 3
+*
+*
+*/
+
+/** 
+* logo
+*/
+
+
+.logo
+{
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    top: 2%;
+    left: 1%;
+    border-right: solid #6B44BF 3px;
+    z-index: 3;
+}
+
+.logo .logo-HW
+{
+    position: absolute;
+    max-width: 90%;
+    height: auto;
+    
+}
+
+.time
+{
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    top: 2%;
+    left: 12%;
+    color: #272727;
+    font-family: 'Quicksand', sans-serif;
+    z-index: 5;
+}
+
+.date
+{
+    position: absolute;
+    width: 250px;
+    height: 28px;
+    top: 10%;
+    left: 12%;
+    font-family: 'Quicksand', sans-serif;
+    color: #272727;
+    z-index: 9;
+}
+
+/*
+* Button
+*/
+
+.button
+{
+    position: relative;
+    top: 15%;
+    left: 81%;
+    width: 9rem;
+    height: 2.5rem;
+    transition: all .4s ease-in-out;
+    z-index: 999;
+}
+
+.button:hover
+{
+    transform: scale(0.9);
+}
+
+.information-button
+{
+    position: absolute;
+    width: 9rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    color: white;
+    font-family: 'futura', sans-serif;
+    font-size: 20px;
+    padding-left: 30%;
+    cursor: pointer;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.70);
+}
+
+.information-button:hover 
+{
+    background-position: 100% 0;
+    transition: all .6s ease-in-out;
+}
+
+.arrow
+{
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 35px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 4;
+}
+
+/*
+* LESSONS
+*/
+.lessons
+{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%; 
+    height: 70%;
+    top: 20%;
+    left: 7%;
+}
+
+.lesson1,
+.lesson2,
+.lesson3,
+.lesson4
+{
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 45%;
+    height: 40%;
+}
+
+.lesson1 img,
+.lesson2 img,
+.lesson3 img,
+.lesson4 img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.lesson1 .hover-content,
+.lesson2 .hover-content,
+.lesson3 .hover-content,
+.lesson4 .hover-content
+{
+    position: absolute;
+    width: 40%;
+    height: 25%;
+    visibility: hidden;
+}
+
+.lesson1:hover .hover-content button,
+.lesson2:hover .hover-content button,
+.lesson3:hover .hover-content button,
+.lesson4:hover .hover-content button
+{
+    visibility: visible;
+    animation: button 1s normal forwards;
+    will-change: transform;
+}
+
+.lesson1:hover .hover-content hr,
+.lesson2:hover .hover-content hr,
+.lesson3:hover .hover-content hr,
+.lesson4:hover .hover-content hr
+{
+    visibility: visible;
+    animation: hr 1s normal forwards;
+    will-change: transform;
+}
+
+.lesson1:hover .hover-content .body-hover,
+.lesson2:hover .hover-content .body-hover,
+.lesson3:hover .hover-content .body-hover,
+.lesson4:hover .hover-content .body-hover
+{
+    visibility: visible;
+    animation: body 1s normal forwards;
+    will-change: transform;
+}
+
+.lesson1:hover .hover-content .title-hover,
+.lesson2:hover .hover-content .title-hover,
+.lesson3:hover .hover-content .title-hover,
+.lesson4:hover .hover-content .title-hover
+{
+    visibility: visible;
+    animation: title 1s normal forwards;
+    text-align: center;
+    will-change: transform;
+}
+
+.lesson1:hover .title,
+.lesson2:hover .title,
+.lesson3:hover .title,
+.lesson4:hover .title
+{
+    visibility: hidden;
+}
+
+.lesson1 .hover-content hr,
+.lesson2 .hover-content hr,
+.lesson3 .hover-content hr,
+.lesson4 .hover-content hr
+{
+    background: white;
+    margin-top: 5%;
+    margin-left: 45%;
+    width: 100px;
+}
+
+.lesson1 .hover-content .body-hover,
+.lesson2 .hover-content .body-hover,
+.lesson3 .hover-content .body-hover,
+.lesson4 .hover-content .body-hover
+{
+    color: white;
+    width: 300px;
+    margin-left: 30%;
+    margin-top: 1%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.lesson1 .hover-content button,
+.lesson2 .hover-content button,
+.lesson3 .hover-content button,
+.lesson4 .hover-content button
+{
+    margin-left: 45%;
+    margin-top: 2%;
+    width: 100px;
+    height: 40px;
+    background: radial-gradient(#5227C7, #6B44BF);
+    border-radius: 34px;
+    font-family: 'Futura', sans-serif;
+    color: white;
+    cursor: pointer;
+}
+
+/** 
+* Lesson 1
+*/
+
+.lesson1 .title
+{
+    position: absolute;
+    color: #FFFFFF;
+    font-family: 'Futura', sans-serif;
+    padding-left: 15%;
+    padding-top: 10%;
+    font-size: 2em;
+}
+
+.lesson1 .hover-content .title-hover
+{
+    color: #FFFFFF;
+    font-family: 'Futura', sans-serif;
+    margin-left: 11%;
+    padding-top: 8%;
+    font-size: 2em;
+}
+
+/** 
+* Lesson 2
+*/
+
+.lesson2 .title
+{
+    position: absolute;
+    color: #FFFFFF;
+    font-family: 'Futura', sans-serif;
+    padding-left: 3.5%;
+    padding-top: 10%;
+    font-size: 2em;
+}
+
+.lesson2 .hover-content .title-hover
+{
+    color: #FFFFFF;
+    font-family: 'Futura', sans-serif;
+    margin-left: 7%;
+    padding-top: 8%;
+    font-size: 2em;
+}
+
+/** 
+* Lesson 3
+*/
+
+.lesson3 .title
+{
+    position: absolute;
+    color: #FFFFFF;
+    font-family: 'Futura', sans-serif;
+    padding-left: 4%;
+    padding-top: 10%;
+    font-size: 2em;
+}
+
+.lesson3 .hover-content .title-hover
+{
+    color: #FFFFFF;
+    font-family: 'Futura', sans-serif;
+    margin-left: 12%;
+    padding-top: 8%;
+    font-size: 2em;
+
+}
+/** 
+* Lesson 4
+*/
+
+
+.lesson4 .title
+{
+    position: absolute;
+    color: #FFFFFF;
+    font-family: 'Futura', sans-serif;
+    margin-left: 18%;
+    padding-top: 10%;
+    font-size: 2em;
+}
+
+.lesson4 .hover-content .title-hover
+{
+    color: #FFFFFF;
+    font-family: 'Futura', sans-serif;
+    margin-left: 7.5%;
+    padding-top: 8%;
+    font-size: 2em;
+}
+
+/** 
+* Animation
+*/
+
+
+@keyframes button
+{
+    0%{transform: translateY(-10px);}
+    100%{transform: translateY(-15px);}
+}
+
+@keyframes hr
+{
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(-30px);}
+}
+@keyframes body
+{
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(-20px);}
+}
+@keyframes title
+{
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(-30px);}
+}
+
+
+
+/** 
+* logo
+*/
+
+
+#section3 .logo
+{
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    top: 2%;
+    left: 1%;
+    border-right: solid #6B44BF 3px;
+}
+
+#section3 .logo .logo-HW
+{
+    max-width: 90%;
+    height: auto;
+    
+}
+
+/** 
+* Time / Date
+*/
+
+#section3 .time
+{
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    top: 2%;
+    left: 12%;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    border: white 1px solid;
+}
+
+#section3 .date
+{
+    position: absolute;
+    width: 250px;
+    height: 28px;
+    top: 5%;
+    left: 12%;
+    font-family: 'Quicksand', sans-serif;
+    /* border: white 1px solid; */
+}
+
+#section3 .date
+{
+    color: black;
+
+}
+
+/**
+ * 
+ * 
+ *  RESPONSIVE
+ * 
+ *
+**/
+
+@media (min-width: 768px) and (max-width: 1024px)
+{
+    .button
+    {
+        position: relative;
+        top: -40%;
+        left: 61%;
+    }
+
+    .lessons
+    {
+        width: 800px; 
+        height: 1000px;
+        top: 13%;
+        left: 8.5%;
+    }
+
+    .lesson1,
+    .lesson2,
+    .lesson3,
+    .lesson4
+    {
+        margin-left: 20%;
+        margin-top: 1%;
+        width: 500px;
+        height: 230px;
+    }
+
+    .lesson1 .hover-content hr,
+    .lesson2 .hover-content hr,
+    .lesson3 .hover-content hr,
+    .lesson4 .hover-content hr
+    {
+        margin-top: 5%;
+        margin-left: 62%;
+        width: 100px;
+    }
+
+    .lesson1 .hover-content .body-hover,
+    .lesson2 .hover-content .body-hover,
+    .lesson3 .hover-content .body-hover,
+    .lesson4 .hover-content .body-hover
+    {
+        margin-left: 35%;
+        margin-top: 1%;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .lesson1 .hover-content button,
+    .lesson2 .hover-content button,
+    .lesson3 .hover-content button,
+    .lesson4 .hover-content button
+    {
+        margin-left: 63%;
+        margin-top: 2%;
+        width: 90px;
+        height: 35px;
+    }
+
+    .lesson1 img,
+    .lesson2 img,
+    .lesson3 img,
+    .lesson4 img
+    {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .lesson1 .title
+    {
+        font-size: 1.5em;
+        padding-left: 22%;
+    }
+
+    .lesson1 .hover-content .title-hover
+    {
+        margin-left: 52%;
+        padding-top: 15%;
+        font-size: 1.5em;
+    }
+
+    .lesson2 .title
+    {
+        font-size: 1.5em;
+        padding-left: 8%;
+    }
+
+    .lesson2 .hover-content .title-hover
+    {
+        margin-left: 45%;
+        padding-top: 15%;
+        font-size: 1.5em;
+    }
+
+    .lesson3 .title
+    {
+        font-size: 1.5em;
+        padding-left: 9%;
+    }
+
+    .lesson3 .hover-content .title-hover
+    {
+        margin-left: 46%;
+        padding-top: 15%;
+        font-size: 1.5em;
+    }
+
+    .lesson4 .title
+    {
+        font-size: 1.5em;
+        padding-left: 8%;
+    }
+
+    .lesson4 .hover-content .title-hover
+    {
+        margin-left: 57%;
+        padding-top: 15%;
+        font-size: 1.5em;
+    }
+}

@@ -1,5 +1,6 @@
 export default class AltPlanet {
     constructor() {
+        this.altPlanet = true
         this.name = this.getAltPlanetName()
         this.width = this.getAltPlanetWidth()
         this.weight = this.getAltPlanetWeight()
@@ -112,7 +113,7 @@ export default class AltPlanet {
 
     getAltPlanetYear() {
         // cycle annuel en années
-        return Math.floor((Math.random() * 1.2) + 0.8)
+        return (Math.random() * 1.2) + 0.8
     }
 
     getAltPlanetDay() {

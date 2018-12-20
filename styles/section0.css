@@ -73,6 +73,14 @@
     left: 44.5%;
 }
 
+h1 {
+    position: absolute;
+    top: 70%;
+    left: 41%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    color: #272727;
+}
 
 .item-scroll
 {
@@ -110,6 +118,7 @@
     left: 40%;
     background: #FFFFFF;
     animation: dot-animation 1.2s infinite;
+    will-change: transform;
 }
 
   
